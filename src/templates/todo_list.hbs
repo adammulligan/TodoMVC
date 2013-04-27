@@ -1,0 +1,10 @@
+<h1>TodoList</h1>
+
+<ul>
+  {{#each tasks}}
+    {{subView "TodoItemView" task=this}}
+  {{/each}}
+</ul>
+
+<input id="task-name"/>
+<button id="add-task" >Add a task</button>
