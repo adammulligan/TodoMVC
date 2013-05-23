@@ -1,52 +1,74 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>BackboneDiorama</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Backbone Diorama</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
 
-    <style type="text/css">
-      body {
-        background: #f0f0f0;
-        font-family: Helvetica, sans-serif;
-      }
+  <body>
+    <section id="todoapp">
+      <header id="header">
+        <h1>Todos</h1>
+        <input id="new-todo" placeholder="What needs to be done?" autofocus>
+      </header>
 
-      .container {
-        width: 600px;
-        margin: 0 auto 0 auto;
-        background: white;
-        padding: 20px;
-        border: 3px solid rgb(156, 153, 153);
-      }
+      <section id="main">
+        <input id="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul id="todo-list">
+          <li class="completed">
+            <div class="view">
+              <input class="toggle" type="checkbox" checked>
+              <label>Create a TodoMVC template</label>
+              <button class="destroy"></button>
+            </div>
+            <input class="edit" value="Create a TodoMVC template">
+          </li>
+          <li>
+            <div class="view">
+              <input class="toggle" type="checkbox">
+              <label>Rule the web</label>
+              <button class="destroy"></button>
+            </div>
+            <input class="edit" value="Rule the web">
+          </li>
+        </ul>
+      </section>
 
-      h1 {
-        margin-top: 0;
-      }
+      <footer id="footer">
+        <span id="todo-count"><strong>1</strong> item left</span>
 
-      ol li {
-        margin-bottom: 15px;
-      }
-    </style>
+        <ul id="filters">
+          <li>
+            <a class="selected" href="#/">All</a>
+          </li>
+          <li>
+            <a href="#/active">Active</a>
+          </li>
+          <li>
+            <a href="#/completed">Completed</a>
+          </li>
+        </ul>
 
-    <script src="js/lib/jquery-1.9.1.min.js"></script>
+        <button id="clear-completed">Clear completed (1)</button>
+      </footer>
+    </section>
+
+    <footer id="info">
+      <p>Double-click to edit a todo</p>
+      <p>Created by <a href="http://github.com/th3james">James Cox</a> and <a href="http://cyanoryx.com">Adam Mulligan</a> using <a href="http://github.com/th3james/BackboneDiorama">Backbone Diorama</a></p>
+    </footer>
+
     <script src="js/lib/json2.js"></script>
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
     <script src="js/lib/handlebars.js"></script>
 
     <script src="js/lib/diorama.js"></script>
-
     <script src="js/application.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        var todoListView = new Backbone.Views.TodoListView()
-        $('.container').append(todoListView.render().el)
-      });
-    </script>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Todo MVC</h1>
-
-    </div>
   </body>
 </html>
-
