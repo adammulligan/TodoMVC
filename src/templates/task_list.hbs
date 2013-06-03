@@ -1,17 +1,16 @@
 <header id="header">
-  <h1>Todos</h1>
-  <input id="new-todo" placeholder="What needs to be done?" autofocus>
+  <input id="new-todo" placeholder="What have you got to do?" autofocus>
 </header>
 
-<section id="main">
-  <input id="toggle-all" type="checkbox">
-  <label for="toggle-all">Mark all as complete</label>
-  <ul id="todo-list">
-    {{#each tasks}}
-      {{subView "TodoItemView" task=this}}
-    {{/each}}
-  </ul>
-</section>
+{{#if tasks.length}}
+  <section id="main">
+    <ul id="todo-list">
+      {{#each tasks}}
+        {{subView "TaskItemView" task=this}}
+      {{/each}}
+    </ul>
+  </section>
+{{/if}}
 
 <footer id="footer">
   <span id="todo-count">{{remainingCount}} left</span>

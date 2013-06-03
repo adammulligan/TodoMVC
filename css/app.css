@@ -1,1 +1,248 @@
-/* base.css overrides */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../images/p6.png');
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: #4d4d4d;
+  width: 550px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+#app {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 40px 0 40px 0;
+  border: 1px solid #ccc;
+  position: relative;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#header {
+  border-radius: inherit;
+}
+
+#new-todo,
+.edit {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  font-family: inherit;
+  line-height: 1.4em;
+  border: 0;
+  outline: none;
+  color: inherit;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #ccc;
+}
+
+label[for='toggle-all'] {
+  display: none;
+}
+
+#todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#todo-list li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px dotted #ccc;
+}
+
+#todo-list li:last-child {
+  border-bottom: none;
+}
+
+#todo-list li .toggle {
+  text-align: center;
+  width: 40px;
+  /* auto, since non-WebKit browsers doesn't support input styling */
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none; /* Mobile Safari */
+  -webkit-appearance: none;
+  /*-moz-appearance: none;*/
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+#todo-list li .toggle:after {
+  content: '✔';
+  line-height: 43px; /* 40 + a couple of pixels visual adjustment */
+  font-size: 20px;
+  color: #d9d9d9;
+  text-shadow: 0 -1px 0 #bfbfbf;
+}
+
+#todo-list li .toggle:checked:after {
+  color: #85ada7;
+  text-shadow: 0 1px 0 #669991;
+  bottom: 1px;
+  position: relative;
+}
+
+#todo-list li label {
+  word-break: break-word;
+  padding: 15px;
+  margin-left: 45px;
+  display: block;
+  line-height: 1.2;
+}
+
+#todo-list li.completed label {
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+#todo-list li .destroy {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 22px;
+  color: #B32C0E;
+}
+
+#todo-list li .destroy:hover {
+  cursor: pointer;
+}
+
+#todo-list li .destroy:after {
+  content: '✖';
+}
+
+#todo-list li:hover .destroy {
+  display: block;
+}
+
+#todo-list li .edit {
+  display: none;
+}
+
+#todo-list li.editing:last-child {
+  margin-bottom: -1px;
+}
+
+#footer {
+  color: #777;
+  padding: 5px 15px;
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  left: -1px;
+  height: 20px;
+  z-index: 1;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+#todo-count {
+  float: left;
+  text-align: left;
+}
+
+#filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+#filters li {
+  display: inline;
+}
+
+#filters li a {
+  color: #83756f;
+  margin: 2px;
+  text-decoration: none;
+}
+
+#filters li a.selected {
+  font-weight: bold;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  /*-moz-appearance: none;*/
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+#clear-completed {
+  float: right;
+  position: relative;
+  line-height: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+#clear-completed:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#info {
+  margin: 65px auto 0;
+  color: #a6a6a6;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+#info a {
+  color: inherit;
+}
+
+#todo-list li .toggle {
+  background: none;
+}
+
+#todo-list li .toggle {
+  height: 40px;
+}

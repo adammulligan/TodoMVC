@@ -1,8 +1,8 @@
 window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
-class Backbone.Views.TodoListView extends Backbone.Diorama.NestingView
-  template: Handlebars.templates['todo_list.hbs']
+class Backbone.Views.TaskListView extends Backbone.Diorama.NestingView
+  template: Handlebars.templates['task_list.hbs']
 
   events:
     'keypress #new-todo': 'addOnEnter'

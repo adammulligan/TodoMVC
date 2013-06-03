@@ -1,9 +1,9 @@
 [
   "models/task",
   "collections/task_collection",
-  "templates/todo_list",
-  "views/todo_list_view",
-  "templates/todo_item",
-  "views/todo_item_view",
+  "templates/task_list",
+  "views/task_list_view",
+  "templates/task_item",
+  "views/task_item_view",
   "controllers/task_controller"
 ]

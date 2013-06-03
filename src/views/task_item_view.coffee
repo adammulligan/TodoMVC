@@ -1,8 +1,8 @@
 window.Backbone ||= {}
 window.Backbone.Views ||= {}
 
-class Backbone.Views.TodoItemView extends Backbone.View
-  template: Handlebars.templates['todo_item.hbs']
+class Backbone.Views.TaskItemView extends Backbone.View
+  template: Handlebars.templates['task_item.hbs']
 
   tagName: 'li'
 
