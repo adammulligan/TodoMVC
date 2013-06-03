@@ -1,1 +1,5 @@
-<input type="checkbox" {{#if task.completed}}checked{{/if}}/>{{task.name}}
+<div class="view">
+  <input class="toggle" type="checkbox" {{#if task.completed}}checked{{/if}}>
+  <label>{{task.name}}</label>
+  <button class="destroy"></button>
+</div>

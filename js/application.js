@@ -1,100 +1,9 @@
-(function() {
-  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['todo_list.hbs'] = template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
-  var buffer = "", stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+(function(){var a=Handlebars.template,b=Handlebars.templates=Handlebars.templates||{};b["todo_list.hbs"]=a(function(a,b,c,d,e){function l(a,b){var d="",e,f;return d+="\n      ",f={hash:{task:a},data:b},d+=i((e=c.subView,e?e.call(a,"TodoItemView",f):h.call(a,"subView","TodoItemView",f)))+"\n    ",d}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h=c.helperMissing,i=this.escapeExpression,j=this,k="function";f+='<header id="header">\n  <h1>Todos</h1>\n  <input id="new-todo" placeholder="What needs to be done?" autofocus>\n</header>\n\n<section id="main">\n  <input id="toggle-all" type="checkbox">\n  <label for="toggle-all">Mark all as complete</label>\n  <ul id="todo-list">\n    ',g=c.each.call(b,b.tasks,{hash:{},inverse:j.noop,fn:j.program(1,l,e),data:e});if(g||g===0)f+=g;return f+='\n  </ul>\n</section>\n\n<footer id="footer">\n  <span id="todo-count">',(g=c.remainingCount)?g=g.call(b,{hash:{},data:e}):(g=b.remainingCount,g=typeof g===k?g.apply(b):g),f+=i(g)+' left</span>\n\n  <ul id="filters">\n    <li>\n      <a href="#">All</a>\n    </li>\n    <li>\n      <a href="#">Active</a>\n    </li>\n    <li>\n      <a href="#">Completed</a>\n    </li>\n  </ul>\n\n  <button id="clear-completed">Clear completed (',(g=c.completedCount)?g=g.call(b,{hash:{},data:e}):(g=b.completedCount,g=typeof g===k?g.apply(b):g),f+=i(g)+")</button>\n</footer>\n",f}),b["todo_item.hbs"]=a(function(a,b,c,d,e){function l(a,b){return"checked"}this.compilerInfo=[2,">= 1.0.0-rc.3"],c=c||a.helpers,e=e||{};var f="",g,h,i=this,j="function",k=this.escapeExpression;f+='<div class="view">\n  <input class="toggle" type="checkbox" ',h=c["if"].call(b,(g=b.task,g==null||g===!1?g:g.completed),{hash:{},inverse:i.noop,fn:i.program(1,l,e),data:e});if(h||h===0)f+=h;return f+=">\n  <label>"+k((g=(g=b.task,g==null||g===!1?g:g.name),typeof g===j?g.apply(b):g))+'</label>\n  <button class="destroy"></button>\n</div>\n',f})})()
 
-function program1(depth0,data) {
-  
-  var buffer = "", stack1, options;
-  buffer += "\n    ";
-  options = {hash:{
-    'task': (depth0)
-  },data:data};
-  buffer += escapeExpression(((stack1 = helpers.subView),stack1 ? stack1.call(depth0, "TodoItemView", options) : helperMissing.call(depth0, "subView", "TodoItemView", options)))
-    + "\n  ";
-  return buffer;
-  }
-
-  buffer += "<h1>TodoList</h1>\n\n<ul>\n  ";
-  stack1 = helpers.each.call(depth0, depth0.tasks, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</ul>\n\n<input id=\"task-name\"/>\n<button id=\"add-task\" >Add a task</button>\n";
-  return buffer;
-  });
-templates['todo_item.hbs'] = template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
-  var buffer = "", stack1, stack2, self=this, functionType="function", escapeExpression=this.escapeExpression;
-
-function program1(depth0,data) {
-  
-  
-  return "checked";
-  }
-
-  buffer += "<input type=\"checkbox\" ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.task),stack1 == null || stack1 === false ? stack1 : stack1.completed), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "/>"
-    + escapeExpression(((stack1 = ((stack1 = depth0.task),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n";
-  return buffer;
-  });
-})();
-
-
-(function() {
-  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['todo_list.hbs'] = template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
-  var buffer = "", stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
-
-function program1(depth0,data) {
-  
-  var buffer = "", stack1, options;
-  buffer += "\n    ";
-  options = {hash:{
-    'task': (depth0)
-  },data:data};
-  buffer += escapeExpression(((stack1 = helpers.subView),stack1 ? stack1.call(depth0, "TodoItemView", options) : helperMissing.call(depth0, "subView", "TodoItemView", options)))
-    + "\n  ";
-  return buffer;
-  }
-
-  buffer += "<h1>TodoList</h1>\n\n<ul>\n  ";
-  stack1 = helpers.each.call(depth0, depth0.tasks, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</ul>\n\n<input id=\"task-name\"/>\n<button id=\"add-task\" >Add a task</button>\n";
-  return buffer;
-  });
-templates['todo_item.hbs'] = template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
-  var buffer = "", stack1, stack2, self=this, functionType="function", escapeExpression=this.escapeExpression;
-
-function program1(depth0,data) {
-  
-  
-  return "checked";
-  }
-
-  buffer += "<input type=\"checkbox\" ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.task),stack1 == null || stack1 === false ? stack1 : stack1.completed), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "/>"
-    + escapeExpression(((stack1 = ((stack1 = depth0.task),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n";
-  return buffer;
-  });
-})();
-
-
+;
 // Generated by CoffeeScript 1.6.2
 (function() {
-  var _base, _base1, _base2, _base3, _base4, _base5, _base6, _base7, _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7,
+  var _base, _base1, _base2, _base3, _ref, _ref1, _ref2, _ref3,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
@@ -110,7 +19,13 @@ function program1(depth0,data) {
     }
 
     Task.prototype.defaults = {
+      title: '',
       completed: false
+    };
+
+    Task.prototype.toggle = function() {
+      this.set('completed', !this.get('completed'));
+      return this.save();
     };
 
     return Task;
@@ -129,7 +44,32 @@ function program1(depth0,data) {
       return _ref1;
     }
 
+    TaskCollection.prototype.localStorage = new Backbone.LocalStorage("SomeCollection");
+
     TaskCollection.prototype.model = Backbone.Models.Task;
+
+    TaskCollection.prototype.clearCompleted = function() {
+      return this.reset(this.active());
+    };
+
+    TaskCollection.prototype.byStatus = function(status) {
+      if (status !== "all") {
+        if (this[status] != null) {
+          return this[status]();
+        }
+      }
+      return this.models;
+    };
+
+    TaskCollection.prototype.completed = function() {
+      return this.filter(function(todo) {
+        return todo.get('completed');
+      });
+    };
+
+    TaskCollection.prototype.active = function() {
+      return this.without.apply(this, this.completed());
+    };
 
     return TaskCollection;
 
@@ -143,25 +83,40 @@ function program1(depth0,data) {
     __extends(TodoListView, _super);
 
     function TodoListView() {
-      this.render = __bind(this.render, this);      _ref2 = TodoListView.__super__.constructor.apply(this, arguments);
+      this.render = __bind(this.render, this);
+      this.completedCount = __bind(this.completedCount, this);
+      this.remainingCount = __bind(this.remainingCount, this);      _ref2 = TodoListView.__super__.constructor.apply(this, arguments);
       return _ref2;
     }
 
     TodoListView.prototype.template = Handlebars.templates['todo_list.hbs'];
 
     TodoListView.prototype.events = {
-      'click #add-task': 'addTask'
+      'keypress #new-todo': 'addOnEnter',
+      'click #filters a': 'setFilter',
+      'click #clear-completed': 'clearCompleted'
     };
 
     TodoListView.prototype.initialize = function(options) {
+      Handlebars.registerHelper('remainingCount', this.remainingCount);
+      Handlebars.registerHelper('completedCount', this.completedCount);
       this.tasks = new Backbone.Collections.TaskCollection();
+      this.tasks.on('change', this.render);
+      this.tasks.on('destroy', this.render);
+      this.tasks.on('reset', this.render);
       return this.render();
+    };
+
+    TodoListView.prototype.addOnEnter = function(event) {
+      if (event.which === 13) {
+        return this.addTask();
+      }
     };
 
     TodoListView.prototype.addTask = function() {
       var name, task;
 
-      name = $('#task-name').val();
+      name = $('#new-todo').val().trim();
       if (name.length > 0) {
         task = new Backbone.Models.Task();
         task.set('name', name);
@@ -170,10 +125,40 @@ function program1(depth0,data) {
       }
     };
 
+    TodoListView.prototype.setFilter = function(event) {
+      this.filter = $(event.target).text().toLowerCase();
+      return this.render();
+    };
+
+    TodoListView.prototype.clearCompleted = function() {
+      return this.tasks.clearCompleted();
+    };
+
+    TodoListView.prototype.remainingCount = function() {
+      var count, word;
+
+      count = this.tasks.active().length;
+      word = "items";
+      if (count === 1) {
+        word = "item";
+      }
+      return new Handlebars.SafeString("" + count + " " + word);
+    };
+
+    TodoListView.prototype.completedCount = function() {
+      return this.tasks.completed().length;
+    };
+
     TodoListView.prototype.render = function() {
+      var tasks;
+
+      tasks = this.tasks.models;
+      if (this.filter != null) {
+        tasks = this.tasks.byStatus(this.filter);
+      }
       this.closeSubViews();
       this.$el.html(this.template({
-        tasks: this.tasks.models
+        tasks: tasks
       }));
       this.renderSubViews();
       return this;
@@ -196,6 +181,7 @@ function program1(depth0,data) {
 
     function TodoItemView() {
       this.setCompleted = __bind(this.setCompleted, this);
+      this.remove = __bind(this.remove, this);
       this.render = __bind(this.render, this);      _ref3 = TodoItemView.__super__.constructor.apply(this, arguments);
       return _ref3;
     }
@@ -205,12 +191,14 @@ function program1(depth0,data) {
     TodoItemView.prototype.tagName = 'li';
 
     TodoItemView.prototype.events = {
-      "click input": "setCompleted"
+      "click input": "setCompleted",
+      "click .destroy": "clear"
     };
 
     TodoItemView.prototype.initialize = function(options) {
       this.model = options.task;
       this.model.on('change', this.render);
+      this.model.on('destroy', this.remove);
       return this.render();
     };
 
@@ -218,144 +206,19 @@ function program1(depth0,data) {
       this.$el.html(this.template({
         task: this.model.toJSON()
       }));
-      return this;
-    };
-
-    TodoItemView.prototype.setCompleted = function(event) {
-      var isChecked;
-
-      isChecked = $(event.target).is(":checked");
-      return this.model.set('completed', isChecked);
-    };
-
-    TodoItemView.prototype.onClose = function() {
-      return this.model.off('change', this.render);
-    };
-
-    return TodoItemView;
-
-  })(Backbone.View);
-
-  (_base4 = window.Backbone).Models || (_base4.Models = {});
-
-  window.Backbone.Models.Task = (function(_super) {
-    __extends(Task, _super);
-
-    function Task() {
-      _ref4 = Task.__super__.constructor.apply(this, arguments);
-      return _ref4;
-    }
-
-    Task.prototype.defaults = {
-      completed: false
-    };
-
-    return Task;
-
-  })(Backbone.Model);
-
-  window.Backbone || (window.Backbone = {});
-
-  (_base5 = window.Backbone).Collections || (_base5.Collections = {});
-
-  Backbone.Collections.TaskCollection = (function(_super) {
-    __extends(TaskCollection, _super);
-
-    function TaskCollection() {
-      _ref5 = TaskCollection.__super__.constructor.apply(this, arguments);
-      return _ref5;
-    }
-
-    TaskCollection.prototype.model = Backbone.Models.Task;
-
-    return TaskCollection;
-
-  })(Backbone.Collection);
-
-  window.Backbone || (window.Backbone = {});
-
-  (_base6 = window.Backbone).Views || (_base6.Views = {});
-
-  Backbone.Views.TodoListView = (function(_super) {
-    __extends(TodoListView, _super);
-
-    function TodoListView() {
-      this.render = __bind(this.render, this);      _ref6 = TodoListView.__super__.constructor.apply(this, arguments);
-      return _ref6;
-    }
-
-    TodoListView.prototype.template = Handlebars.templates['todo_list.hbs'];
-
-    TodoListView.prototype.events = {
-      'click #add-task': 'addTask'
-    };
-
-    TodoListView.prototype.initialize = function(options) {
-      this.tasks = new Backbone.Collections.TaskCollection();
-      return this.render();
-    };
-
-    TodoListView.prototype.addTask = function() {
-      var name, task;
-
-      name = $('#task-name').val();
-      if (name.length > 0) {
-        task = new Backbone.Models.Task();
-        task.set('name', name);
-        this.tasks.add(task);
-        return this.render();
+      if (this.model.get('completed')) {
+        this.$el.attr('class', 'completed');
       }
-    };
-
-    TodoListView.prototype.render = function() {
-      this.closeSubViews();
-      this.$el.html(this.template({
-        tasks: this.tasks.models
-      }));
-      this.renderSubViews();
       return this;
     };
 
-    TodoListView.prototype.onClose = function() {
-      return this.closeSubViews();
+    TodoItemView.prototype.remove = function() {
+      this.$el.remove();
+      return this.stopListening();
     };
 
-    return TodoListView;
-
-  })(Backbone.Diorama.NestingView);
-
-  window.Backbone || (window.Backbone = {});
-
-  (_base7 = window.Backbone).Views || (_base7.Views = {});
-
-  Backbone.Views.TodoItemView = (function(_super) {
-    __extends(TodoItemView, _super);
-
-    function TodoItemView() {
-      this.setCompleted = __bind(this.setCompleted, this);
-      this.render = __bind(this.render, this);      _ref7 = TodoItemView.__super__.constructor.apply(this, arguments);
-      return _ref7;
-    }
-
-    TodoItemView.prototype.template = Handlebars.templates['todo_item.hbs'];
-
-    TodoItemView.prototype.tagName = 'li';
-
-    TodoItemView.prototype.events = {
-      "click input": "setCompleted"
-    };
-
-    TodoItemView.prototype.initialize = function(options) {
-      this.model = options.task;
-      this.model.on('change', this.render);
-      return this.render();
-    };
-
-    TodoItemView.prototype.render = function() {
-      this.$el.html(this.template({
-        task: this.model.toJSON()
-      }));
-      return this;
+    TodoItemView.prototype.clear = function() {
+      return this.model.destroy();
     };
 
     TodoItemView.prototype.setCompleted = function(event) {

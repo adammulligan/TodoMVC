@@ -4,5 +4,6 @@
   "templates/todo_list",
   "views/todo_list_view",
   "templates/todo_item",
-  "views/todo_item_view"
+  "views/todo_item_view",
+  "controllers/task_controller"
 ]

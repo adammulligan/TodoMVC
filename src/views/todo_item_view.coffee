@@ -8,16 +8,30 @@ class Backbone.Views.TodoItemView extends Backbone.View
 
   events:
     "click input": "setCompleted"
+    "click .destroy": "clear"
 
   initialize: (options) ->
     @model = options.task
 
     @model.on('change', @render)
+    @model.on('destroy', @remove)
+
     @render()
 
   render: =>
     @$el.html(@template(task: @model.toJSON()))
+
+    if @model.get('completed')
+      @$el.attr('class', 'completed')
+
     return @
+
+  remove: =>
+    @$el.remove()
+    @stopListening()
+
+  clear: ->
+    @model.destroy()
 
   setCompleted: (event)=>
     isChecked = $(event.target).is(":checked")

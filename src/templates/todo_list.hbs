@@ -1,10 +1,32 @@
-<h1>TodoList</h1>
+<header id="header">
+  <h1>Todos</h1>
+  <input id="new-todo" placeholder="What needs to be done?" autofocus>
+</header>
 
-<ul>
-  {{#each tasks}}
-    {{subView "TodoItemView" task=this}}
-  {{/each}}
-</ul>
+<section id="main">
+  <input id="toggle-all" type="checkbox">
+  <label for="toggle-all">Mark all as complete</label>
+  <ul id="todo-list">
+    {{#each tasks}}
+      {{subView "TodoItemView" task=this}}
+    {{/each}}
+  </ul>
+</section>
 
-<input id="task-name"/>
-<button id="add-task" >Add a task</button>
+<footer id="footer">
+  <span id="todo-count">{{remainingCount}} left</span>
+
+  <ul id="filters">
+    <li>
+      <a href="#">All</a>
+    </li>
+    <li>
+      <a href="#">Active</a>
+    </li>
+    <li>
+      <a href="#">Completed</a>
+    </li>
+  </ul>
+
+  <button id="clear-completed">Clear completed ({{completedCount}})</button>
+</footer>
