@@ -11,7 +11,6 @@
     <script src="js/lib/jquery-1.9.1.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
-    <script src="js/lib/backbone.localStorage.js"></script>
     <script src="js/lib/handlebars.js"></script>
 
     <script src="js/lib/diorama.js"></script>
@@ -19,8 +18,7 @@
 
     <script>
       $(document).ready(function() {
-        var taskList = new Backbone.Views.TaskListView();
-        $('#app').html(taskList.render().el);
+        new Backbone.Controllers.TasksController()
       });
     </script>
   </head>

@@ -6,6 +6,7 @@
   <section id="main">
     <ul id="todo-list">
       {{#each tasks}}
+        <!-- Add a new Backbone.Views.TaskItemView for the task model into the current NestingView -->
         {{addSubViewTo ../thisView "TaskItemView" task=this}}
       {{/each}}
     </ul>

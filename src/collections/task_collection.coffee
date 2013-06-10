@@ -2,8 +2,6 @@ window.Backbone ||= {}
 window.Backbone.Collections ||= {}
 
 class Backbone.Collections.TaskCollection extends Backbone.Collection
-  localStorage: new Backbone.LocalStorage("SomeCollection")
-
   model: Backbone.Models.Task
 
   clearCompleted: ->

@@ -8,4 +8,3 @@ class window.Backbone.Models.Task extends Backbone.Model
   toggle: ->
     @set('completed', !@get('completed'))
     @save()
-

@@ -4,5 +4,6 @@
   "templates/task_list",
   "views/task_list_view",
   "templates/task_item",
-  "views/task_item_view"
+  "views/task_item_view",
+  "controllers/tasks_controller"
 ]
