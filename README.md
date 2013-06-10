@@ -4,6 +4,10 @@ This is a todo app built using [BackboneDiorama](https://github.com/th3james/Bac
 full [TodoMVC](http://todomvc.com) app as specified by their site (yet!), but it should help you get started with
 Diorama.
 
+The app is running on github pages:
+
+[http://adammulligan.github.io/TodoMVC/](http://adammulligan.github.io/TodoMVC/)
+
 ## Framework
 
 BackboneDiorama is everything you need to build client-side web applications.
