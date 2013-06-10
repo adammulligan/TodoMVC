@@ -59,7 +59,7 @@ class Backbone.Views.TaskListView extends Backbone.Diorama.NestingView
       tasks = @tasks.byStatus(@filter)
 
     @closeSubViews()
-    @$el.html(@template(tasks: tasks))
+    @$el.html(@template(thisView: @, tasks: tasks))
     @renderSubViews()
 
     return @

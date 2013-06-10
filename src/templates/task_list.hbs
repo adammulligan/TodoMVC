@@ -6,7 +6,7 @@
   <section id="main">
     <ul id="todo-list">
       {{#each tasks}}
-        {{subView "TaskItemView" task=this}}
+        {{addSubViewTo ../thisView "TaskItemView" task=this}}
       {{/each}}
     </ul>
   </section>
