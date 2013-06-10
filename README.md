@@ -26,8 +26,9 @@ Learn more at [the project homepage](https://github.com/th3james/BackboneDiorama
 
 ## Implementation
 
-The entry point to the application is through the TaskController, which is in src/controllers/task_controller.coffee.
-Every object has been generated using `diorama generate`, then adapted.
+The entry point to the application is through the TasksController, which is in src/controllers/tasks_controller.coffee.
+Every object has been generated using [`diorama generate`](https://github.com/th3james/BackboneDiorama/tree/master/src/commands/generators#backbonediorama-generators),
+then adapted.
 
 This deviates from the TodoMVC spec a fair bit, mostly in the interests of getting a first version up and running.
 Longer term, we're aiming to get it fully compliant.
