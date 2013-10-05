@@ -62,8 +62,6 @@ class Backbone.Views.TaskListView extends Backbone.Diorama.NestingView
     @$el.html(@template(thisView: @, tasks: tasks))
     # Attaches sub views (but does not call render)
     @attachSubViews()
-    # Render sub views into the elements created by subView helper in the template
-    @renderSubViews()
 
     return @
 

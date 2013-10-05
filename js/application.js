@@ -157,7 +157,6 @@
         tasks: tasks
       }));
       this.attachSubViews();
-      this.renderSubViews();
       return this;
     };
 
